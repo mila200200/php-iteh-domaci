@@ -25,12 +25,13 @@ class Vino{
   }
 
   public function update($conn){
-    return $conn->query("UPDATE vino SET nazivVina='$this->nazivVina',kolicina='$this->kolicina','cena=$this->cena', tipId='$this->tipId' where vinoId=$this->vinoId");
+    return $conn->query("UPDATE vino SET nazivVina='$this->nazivVina',kolicina='$this->kolicina' where vinoId=$this->vinoId");
 }
 
 public static function getById($id, $conn){
   return $conn->query("SELECT * FROM vino WHERE vinoId = $id");
 }
+
 
 }
 

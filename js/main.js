@@ -87,8 +87,8 @@ $('.btn-info').click(function () {
   console.log(nazivVina);
   var kolicina = $(this).closest('tr').children('td[data-target=kolicina]').text();
   var cena = $(this).closest('tr').children('td[data-target=cena]').text();
-  var tipId = $(this).closest('tr').children('td[data-target=tipId]').text();
   console.log(cena);
+  var tipId = $(this).closest('tr').children('td[data-target=tipId]').text();
   console.log(tipId);
   
 
@@ -99,5 +99,37 @@ $('.btn-info').click(function () {
   document.getElementById('tipOznaceni').value = tipId;
 });
 
+//Updates
+$('#izmeniForma').submit(function(){
+
+  event.preventDefault();
+  console.log("Izmena");
+  const $form = $(this);
+  const $input = $form.find('input, select, button, textarea');
+
+  const serijalizacija = $form.serialize();
+  console.log(serijalizacija);
+
+  $input.prop('disabled', true);
+
+  req = $.ajax({
+    url: 'handler/azurirajVino.php',
+    type: 'post',
+    data: serijalizacija
+  });
+
+  req.done(function (res, textStatus, jqXHR) {
+    if (res == 'Ok') {
+      alert("Vino je uspesno azurirano");
+      location.reload(true);
+    } else console.log("Vino nije azurirano " + res);
+  });
+
+  req.fail(function (jqXHR, textStatus, errorThrown) {
+    console.error('Sledeca greska se desila: ' + textStatus, errorThrown)
+  });
+
+
+});
 
 

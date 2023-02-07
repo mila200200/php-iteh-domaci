@@ -4,15 +4,13 @@
  require '../model/tip.php';
 
 
- if(isset($_POST['idKnjige']) && isset($_POST['idZanra']) && isset($_POST['nazivVina']) && isset($_POST['kolicina']) && isset($_POST['cena']) && isset($_POST['tipId'])){
-  $vinoId=$_POST['idKnjige'];
+ if(isset($_POST['vinoId']) && isset($_POST['tip'])&& isset($_POST['nazivVina']) && isset($_POST['kolicina']) ){
+  $vinoId=$_POST['vinoId'];
   $nazivVina=$_POST['nazivVina'];
   $kolicina=$_POST['kolicina'];
-  $cena=$_POST['cena'];
-  $tipId=$_POST['tipId'];
 
 
-  $vino=new Vino($vinoId,$nazivVina,$kolicina,$cena,$tipId);
+  $vino=new Vino($vinoId,$nazivVina,$kolicina);
   $rezultat=$vino->update($conn);
   
   if($rezultat){
