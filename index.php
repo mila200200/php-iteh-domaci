@@ -57,7 +57,7 @@ if (isset($_COOKIE["admin"]))
                 <div class="deoslika" style="background-color: #A2484F; margin-top:50px ;">
                     <img src="https://pennsylvaniawine.com/wp-content/uploads/2020/07/WEB_PicnicSpreads.jpg" alt="pocetna" class="slikaPocetna"
                     style="width: 1100px; height:550px; align:center">
-                    <h2 style="color:white ; "> Duša bez vina kratkog je daha - Heraklit</h2>
+                    <h2 style="color:white ; text-align: center; padding-bottom:20px "> Duša bez vina kratkog je daha - Heraklit</h2>
                 </div>
             </div>
         </div>
