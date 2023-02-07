@@ -15,7 +15,7 @@
         endwhile;
     ?>
     <table class="table table-hover"  >
-    <thead style="font-weight:500px ;background-color:#A2484F">
+    <thead style="font-weight:500px ;background-color:#A2484F; color:white">
         <tr >
             <th scope="col">Naziv vina</th>
             <th scope="col">Cena</th>
@@ -23,7 +23,7 @@
             <th scope="col">Tip vina</th>
         </tr>
     </thead>
-    <tbody style="background-color:#CB918D" >
+    <tbody style="background-color:#CB918D ;color:#A2484F" >
         <?php echo "<br>"?>
         <?php echo "<br>"?>
         <?php echo "<br>"?>
