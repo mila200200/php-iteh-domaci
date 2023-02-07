@@ -1,14 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-body {
-  	background-color: #ffffff;
-  	font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #555;
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+
+.stranica {
+    background-color: aqua;
 }
 
 
@@ -44,6 +39,9 @@ p {
     margin: 1em 0;
     padding: 0;
 }
+
+
+
 
 
 
