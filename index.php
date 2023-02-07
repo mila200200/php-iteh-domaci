@@ -47,7 +47,7 @@ if (isset($_COOKIE["admin"]))
                         Dodaj novo vino</a></li>
                     <li><a id="btn-Prikazi" href="pogledajVina.php" type="button" class="btn btn-success btn-block"style="margin-top:-60px; background-color: #CB918D;margin-left:18px; margin-right:18px">
                         Pogledaj vina</a></li>
-                    <li><a class="btn btn-danger" href="odjava.php" style="margin-left: 550px; margin-top:-130px; background-color: ##CB918D;">
+                    <li><a id="btn-Pocetna" href="odjava.php" type="button" class="btn btn-success btn-block" style="background-color:#EFB9AD; color:white; margin-left:60px; margin-top:-60px">
                     Odjavi se</a> </li>
                 </div>
                 
