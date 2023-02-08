@@ -102,9 +102,9 @@ if (isset($_POST['tip'])) {
       array_push($niz, $vino);
     }
     ?>
-    <p id="p">Lista svih vina</p>
+    <p id="p" style="color:white; font-size:35px">Lista svih vina</p>
     <table class="table table-hover">
-      <thead>
+      <thead style="font-weight:500px ;background-color:#A2484F; color:white">
         <tr>
           <th>Naziv vina</th>
           <th>Kolicina vina</th>
@@ -114,7 +114,7 @@ if (isset($_POST['tip'])) {
           <th>Izmeni</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="color:#A2484F; font-size:20px ">
         <?php
         foreach ($niz as $vrednost) {
         ?>
@@ -124,8 +124,10 @@ if (isset($_POST['tip'])) {
             <td data-target="kolicina"><?php echo $vrednost->kolicina ?> </td>
             <td data-target="cena"><?php echo $vrednost->cena ?> </td>
             <td data-target="tipId"><?php echo $vrednost->tipId->nazivTipa ?></td>
-            <td><button id="btnObrisi" name="btnObrisi" class="btn btn-danger" data-id1="<?php echo $vrednost->vinoId ?>">Obrisi</a></td>
-            <td><button class="btn btn-info" data-toggle="modal" data-target="#my1" data-id2="<?php echo $vrednost->vinoId ?>">Izmeni</a></td>
+            <td><button id="btnObrisi" name="btnObrisi" class="btn btn-danger" style="background-color:#A2484F ; color:white ; font-weight:bold; padding-top:10px; font-size:17px"
+            data-id1="<?php echo $vrednost->vinoId ?>">Obrisi</a></td>
+            <td><button class="btn btn-info" data-toggle="modal" style="background-color:#CB918D ; color:white ; font-weight:bold; padding-top:10px; font-size:17px"
+            data-target="#my1" data-id2="<?php echo $vrednost->vinoId ?>">Izmeni</a></td>
           </tr>
         <?php
         }
@@ -147,30 +149,31 @@ if (isset($_POST['tip'])) {
             <form action="#" method="post" id="izmeniForma">
 
 
-              <h3 style="color: black; text-align: center">Izmeni podatke o vinu</h3>
+              <h3 style="color: #A2484F; text-align: center;font-size:25px">Izmeni podatke o vinu</h3>
               <div class="row">
                 <div class="col-md-11 ">
 
                   <div style="display: none;" class="form-group">
                     <label for="">vinoId</label>
-                    <input  id="vinoId" type="text" style="border: 1px solid black" name="vinoId" class="form-control" />
+                    <input  id="vinoId" type="text" style="border: 1px solid #A2484F" name="vinoId" class="form-control" />
                   </div>
 
                   <div class="form-group" style="display: none;">
-                    <label for="">tipId</label>
-                    <input id="tipId"  type="text" style="border: 1px solid black" name="tip" class="form-control" />
+                    <label style="color:#EFB9AD;font-size:18px" for="">tipId</label>
+                    <input id="tipId"  type="text" style="border: 1px solid #A2484F" name="tip" class="form-control" />
                   </div>
                   <div class="form-group">
-                    <label for="">Naziv vina</label>
-                    <input id="nazivVina" type="text" style="border: 1px solid black" name="nazivVina" class="form-control" />
+                    <label style="color:#EFB9AD;font-size:18px" for="">Naziv vina</label>
+                    <input id="nazivVina" type="text" style="border: 1px solid #A2484F" name="nazivVina" class="form-control" />
                   </div>
                   <div class="form-group">
-                    <label for="">Kolicina</label>
-                    <input id="kolicina" type="text" style="border: 1px solid black" name="kolicina" class="form-control" />
+                    <label style="color:#EFB9AD;font-size:18px" for="">Kolicina</label>
+                    <input id="kolicina" type="text" style="border: 1px solid #A2484F" name="kolicina" class="form-control" />
                   </div>
                  
                   <div class="form-group">
-                    <button id="btnIzmeni" type="submit" class="btn btn-success btn-block" tyle="background-color: orange; border: 1px solid black;">Izmeni</button>
+                    <button id="btnIzmeni" type="submit" class="btn btn-success btn-block" style="background-color:#EFB9AD ; color:white ; font-weight:bold; padding-top:10px; font-size:17px">
+                    Izmeni</button>
                   </div>
                 </div>
               </div>
